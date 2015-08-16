@@ -2,10 +2,14 @@
 -- From http://GameDevNation.com
 -- Source: http://gamedevnation.com/game-development/graphics-layout-tool/
 
+local M = {}
 local movieclip = require("movieclip")
 
-display.setStatusBar(display.HiddenStatusBar)
+-- turn all objects into a drag-drop movie clips
+-- and spits the co-ordinates into the coronaSDK console
+function M.movieclip()
 
+end
 local sky = display.newImage("sky.jpg", 0, 0)
 
 local myPics = { "grass.png", "bamboo.png", "palm.png" }
