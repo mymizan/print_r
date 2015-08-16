@@ -1,5 +1,5 @@
-local print_r = require("print_r")
+local utility= require("utility")
 
 local t = { hello = "world" }
 
-print_r(t)
+utility.print_r(t)

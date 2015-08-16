@@ -1,4 +1,7 @@
-local function print_r ( t ) 
+local M = {}
+
+-- handy utility function for printing lua table
+function M.print_r ( t ) 
         local print_r_cache={}
         local function sub_print_r(t,indent)
                 if (print_r_cache[tostring(t)]) then
@@ -31,4 +34,10 @@ local function print_r ( t )
         end
         print()
 end
-return print_r
+
+-- function to draw a grid on the screen
+-- can be used to check object positioning
+function M.draw_grid(rows, cols)
+        --stub
+end
+return M
