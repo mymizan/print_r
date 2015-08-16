@@ -1,5 +1,9 @@
+-- hide the status bar
+display.setStatusBar( display.HiddenStatusBar )
+
+-- set default background color to white
+display.setDefault("background", 255, 255, 255, 1)
+
 local utility= require("utility")
 
-local t = { hello = "world" }
-
-utility.print_r(t)
+utility.draw_grid(20,20)

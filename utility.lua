@@ -38,6 +38,28 @@ end
 -- function to draw a grid on the screen
 -- can be used to check object positioning
 function M.draw_grid(rows, cols)
-        --stub
+	   -- find row and column width
+       local actual_height = display.actualContentHeight
+       local actual_width  = display.actualContentWidth
+       local col_width  = actual_width/cols
+       local row_width  = actual_height/rows
+       
+       
+
+       local row_position = row_width
+       for i=1,rows do
+       		local line = display.newLine(0, row_position, display.actualContentWidth, row_position)
+       		line:setStrokeColor( 1, 0, 0, 1 )
+			line.strokeWidth = 4
+			row_position = row_position + row_width
+       	end
+
+       	local col_position = col_width
+       	for i=1,cols do
+       		local line = display.newLine(col_position, 0, col_position, display.actualContentHeight)
+       		line:setStrokeColor( 1, 0, 0, 1 )
+			line.strokeWidth = 4
+			col_position = col_position + col_width
+       	end
 end
 return M
